@@ -1,0 +1,14 @@
+<div class="filter-section">
+  <input [(ngModel)]="filter.id" placeholder="Filter by Image ID" type="number" />
+  <input [(ngModel)]="filter.author" placeholder="Filter by Author" />
+  <input [(ngModel)]="filter.text" placeholder="Filter by Text" />
+  <button (click)="applyFilter()">Apply Filter</button>
+</div>
+<cdk-virtual-scroll-viewport itemSize="120" class="viewport">
+  <div *cdkVirtualFor="let item of data">
+    <img src="{{item.photo}}" alt="{{item.author}}" width="100">
+    <p>{{ item.author }}</p>
+    <p>{{ item.text }}</p>
+    <button (click)="toggleFavorite(item)">{{ item.favorite ? 'Remove from Favorites' : 'Add to Favorites' }}</button>
+  </div>
+</cdk-virtual-scroll-viewport>

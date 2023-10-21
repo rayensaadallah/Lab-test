@@ -1,0 +1,37 @@
+.example-viewport {
+    height: 600px; 
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .example-item {
+    height: 100px; 
+  }
+  .filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-section input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-section button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-section button:hover {
+    background-color: #0056b3;
+}
+.viewport {
+  height: 500px;
+  overflow: auto;
+}
